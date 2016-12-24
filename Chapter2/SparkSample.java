@@ -46,7 +46,7 @@ public class SparkSample
 		conf.setMaster("local");
 		JavaSparkContext sc = new JavaSparkContext(conf);
 		
-		JavaRDD<String> rdd = sc.textFile("constituion.txt");
+		JavaRDD<String> rdd = sc.textFile("constitution.txt");
 		System.out.println("Lines in RDD are " + rdd.count());
 		
 		JavaRDD<String> filtRdd = rdd.filter(x -> x.toLowerCase().contains("freedom"));
